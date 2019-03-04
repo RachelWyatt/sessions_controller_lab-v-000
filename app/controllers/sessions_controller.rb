@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
-require 'pry'
+
   def new
   end
 
   def create
-    binding.pry
+byebug
     if params[:name] != '' || nil
       session[:name] = params[:name]
       redirect_to '/'
