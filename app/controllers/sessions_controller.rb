@@ -4,12 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-byebug
-    if params[:name] != '' || nil
-      session[:name] = params[:name]
-      redirect_to '/'
-    else
+    session[:name] = params[:name]
+    if session[:name] == nil
       redirect_to '/login'
+    else
+      redirect_to '/'
     end
   end
 
