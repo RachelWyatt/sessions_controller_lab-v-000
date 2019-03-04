@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
 
   def create
     session[:name] = params[:name]
-    byebug
     if session[:name] == nil
       redirect_to '/login'
     else
